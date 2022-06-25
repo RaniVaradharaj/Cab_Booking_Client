@@ -6,15 +6,15 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import WelcomePage from './components/WelcomePage'
 import UserPage from './UserPage'
 import DriverPage from './DriverPage'
-import CreateUser from './components/CreateUser';
+import UserSignup from "./components/UserSignup";
+import { Container } from "react-dom";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/WelcomePage" element={<WelcomePage />} />
-          <Route path="/CreateUser" element={<CreateUser />} />
+          <Route path="/UserSignup" element={<UserSignup />} />
           <Route path="/" element={<WelcomePage />} />
           <Route path="/UserPage" element={<UserPage />} />
         </Routes>
