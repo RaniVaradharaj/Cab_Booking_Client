@@ -31,11 +31,16 @@ function WelcomePage() {
             <h2>Take a Ride</h2>
           </i>
           <h4>
-            <Link to='/CreateUser'className="bg-warning p-3 regbtn">Register</Link>
+            <Link to="/UserSignup" className="bg-warning p-3 regbtn">
+              Register
+            </Link>
           </h4>
           <div>Already have Account?</div>
           <h4>
-            <button className="bg-primary p-3 loginbtn">Login</button>
+            {/* <button className="bg-primary p-3 loginbtn">Login</button> */}
+            <Link to="/UserLogin" className="bg-primary p-3 loginbtn">
+              Login
+            </Link>
           </h4>
         </div>
       </div>

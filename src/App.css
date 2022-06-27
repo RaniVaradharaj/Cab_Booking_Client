@@ -43,6 +43,8 @@
 
 .regbtn{
   width: 12rem;
+  color: aliceblue;
+  text-underline-offset:unset;
 }
 
 .loginbtn{
