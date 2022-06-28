@@ -4,6 +4,7 @@ import PhoneInput from "react-phone-number-input";
 import { useState } from "react";
 import { Form, Alert, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+// import { useUserAuth } from "../context/UserAuthContext";
 
 const SignUp = () => {
   const [number, setNumber] = useState("");
@@ -21,7 +22,7 @@ const SignUp = () => {
       <Form onSubmit={getOtp}>
         <Form.Group className="mb-3" controlId="formBasicPhoneNumber">
           <PhoneInput
-            defaultCountry="PH"
+            defaultCountry="IN"
             value={number}
             onChange={setNumber}
             placeholder="Enter Phone Number"
