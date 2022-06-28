@@ -9,6 +9,9 @@ function UserSignup() {
       <p>
         <input type="number" placeholder="Enter Your Mob No."></input>
       </p>
+      <p>
+        <button>Get OTP</button>
+      </p>
     </>
   );
 }

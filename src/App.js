@@ -8,6 +8,7 @@ import UserPage from './UserPage'
 import DriverPage from './DriverPage'
 import UserSignup from "./components/UserSignup";
 import { Container } from "react-dom";
+import Home from "./FirebaseCompo/home";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/UserSignup" element={<UserSignup />} />
-          <Route path="/" element={<WelcomePage />} />
+          <Route path="/" element={<Home />} />
           <Route path="/UserPage" element={<UserPage />} />
         </Routes>
       </BrowserRouter>
