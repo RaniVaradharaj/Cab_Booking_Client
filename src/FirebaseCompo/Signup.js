@@ -4,14 +4,23 @@ import PhoneInput from "react-phone-number-input";
 import { useState } from "react";
 import { Form, Alert, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import { useUserAuth } from "../context/UserAuthContext";
+import { useUserAuth } from "../context/UserAuthContext";
 
 const SignUp = () => {
   const [number, setNumber] = useState("");
   const [error, setError] = useState("");
+  const { setUpRecaptcha } = useUserAuth();
 
-  const getOtp = (e) => {
+  const getOtp = async (e) => {
     e.preventDefault();
+    setError("");
+    if (number === "" || number === "undefined")
+      return setError("Please ener a valid form number");
+    try {
+      const response = await setUpRecaptcha(number);
+    } catch (error) {
+      console.log(error.message);
+    }
     console.log(number);
   };
 
